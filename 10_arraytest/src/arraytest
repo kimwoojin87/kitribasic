@@ -1,0 +1,95 @@
+**배열(array)
+1. 같은 데이터타입의 여러개 값을 연속적으로 저장.
+2. 배열은 생성시 반드시 크기를 지정해야함.
+     배열은 크기 변경 불가능.	
+     배열의 크기는 length keyword사용.
+3. 배열
+ 3-1 기본DT 배열
+    형식)
+	a. 선언
+	 접근제어자 기본데이터타입[] 배열명; or 접근제어자 기본데이터타입 배열명[];
+	 예)
+	 public int[] x; or public int x[];
+	 char c[];
+	 boolean[] b;
+	 
+	b. 생성
+	 배열명 = new 기본DT[길이 혹은 크기]
+	 예)
+	  x = new int[3];
+	  c = new char[5];
+	  b = new boolean[2];
+	  
+	  
+	  >>>>>>>>>>>>>>>>a,b를 동시에...
+	 접근제어자 기본DT 배열명[] = new 기본DT[크기];
+	 public int x[] = new int[3];
+	 char c[] = new char[5];
+	 boolean b[] = new boolean[2];
+	 
+	c. 사용
+	 배열명[index] = 값;
+	 예)
+	 x[0] = 10;
+	 x[1] = 20;
+	 x[2] = 30;
+	 배열을 썻을시 좋은점
+	 for(int i=0;i<3;i++)
+	 	x[i] = (i+1)*10;
+	 	
+	 c[0] = 'a';
+	 
+	 b[0] = true
+	 
+	 
+	 >>>>>>>>>>>>>>>>>>>a,b,c를 동시에. <특수한경우>
+	 public int x[] = {10,20,30};
+	 char c[] = {'a','b','c','d','e'};
+	 bolean b[] = {false,true};
+	 %주의할점%
+	 이 방법은 메소드를 호출해서 뭐해라는 안되고 정해져있는 값, 리터럴값만 가능하다.
+	 
+	 -------번외--------
+	 String s[] = {"java","hello"};
+	 스트링도 기본데이터타입처럼 사용은 할 수 있다.
+ 
+ 3-2. RDT 배열
+     * reference Data Type 배열
+        형식)
+	   a. 선언
+	     접근제어자 RDT[] 배열명; or 접근제어자 RDT 배열명[];
+	     예)
+	     public String[] str; or public String str[];
+	     Car car[];
+	   
+	   b. 생성
+	     배열명 = new RDT[길이(크기)];
+	     예)
+	     str = new String[3];
+	     car = new Car[5];
+	     
+	     >>>>>>>>>>>>>>> a, b를 동시에...
+	     접근제어자 RDT 배열명[] = new RDT[크기];
+	     public String x[] = new String[3];
+	     Car car[] = new Car[5];
+	   
+	   c. 사용
+	     배열명[index] = 주소값(reference);[new RDT();]
+	     예)
+	     str[0] = "hello";
+	     str[1] = "java";
+	     str[2] = new String("!!!");
+	     
+	     car[0] = new Car();
+	     .
+	     .
+	     .
+	     car[4] = new Car();
+
+
+** 데이터를 담는 class 의 경우 아래 3가지 명칭을 많이 쓴다
+* Dto : Data Transfer Object 
+		Db에 insert같은거 할 때 사용
+* Vo : Value Object
+* Bean : 콩껍데기
+ 
