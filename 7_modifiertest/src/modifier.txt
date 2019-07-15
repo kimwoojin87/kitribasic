@@ -1,0 +1,28 @@
+** 수정자(modifier)
+  1. abstract
+  2. static : 공유 <<일반적으로 호출이 다음 호출에 영향을 미치지않을떄 사용한다.
+  3. final : 
+    a. class		: 이 클래스는 더 이상 상속이 불가능하다.
+    b. method		: override 불가능해짐.
+    c. variable		: 상수
+
+
+
+
+			abstract		static			final
+
+class			O			X(inner class제외)	O
+method			O			O			O
+variable		X			O			O	
+
+
+
+
+%inner class%
+class A{
+
+  class B{<--요 부분에 static가능
+
+  }
+
+}
