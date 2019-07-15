@@ -1,0 +1,49 @@
+* 용어정리
+class 상위클래스(super,부모,parent,조상)
+^
+|
+class 하위클래스(sub,자식,child,후손)
+
+
+** 상속(inheritance) : 클래스와 클래스의 관계
+1. 상위 class의 filed와 method를 하위 class에서 객체 생성없이 사용.
+	단, private field 와 method는 상속X
+		생성자도 상속 x
+2. extends keyword 사용.
+형식)
+접근제어자 class ClassName(하위) extends ClassName(상위) {
+
+}
+3. 클래스간의 상속은 단일 상속만 가능. 
+   다중상속 불가능.
+   계층적 상속은 가능.
+4. 모든 클래스의 최상위 클래스는 Object 이다.
+5. method overriding ( 메쏘드의 재정의) : 하위클래스의 기능에 맞게끔 재정의
+   method의 선언은 그대로...(단, 접근제어자는 넓은 의미로 변경 가능 private으로 선언된건 변경안됨)
+   부모님한테 집을 물려받았는데 집이 시골집이라 아궁이를 씀. 이걸 보일러로 바꿈
+6.this
+  super : 상위 클래스 참조변수 
+
+  this()
+  super() : 상위 클래스 생성자 호출.
+7. 다형성 : 하위 클래스를 참조하여 상위 클래스의 객체를 생성. --추상 클래스일떄 제대로 진행함.
+            b라는 클래스가 a를 상속받았다 A a = new B로 해도된다.
+   A.class(상위) B.class(하위)
+   A a = new A(); <------여태까지 해온 방식
+   B b = new B(); <------여태까지 해온 방식
+   A a = new B(); <------여태까지 해온 방식
+8. 관계 class의 관계
+   has a  :집합 관계 ::
+   is a   :상속 관계 ::택시는 자동차이다 택시는 car를 상속받을 수가 있다. 
+			이 관계가 성립될떄에만 상속이 가능하고 나머지는 하던대로 생성자를 만들어서하면됨
+
+
+상위:::		자동차 - 차이름,색상,제조사,속도
+		(Car)	가속(), 감속(), 정지()
+
+하위:::	택시(taxi) 속도150		버스(Bus)  속도110			트럭(Truck)  속도100
+	요금(price)			승객수(pcount)			중량(weight) , 총중량(maxweight)
+	요금계산()			타다()				상차()
+	calcPrince(int km)		getOn(int pcount)		loadup(int weight)
+	키로당100원			내리다()			하차()
+	기본요금38000			getOut(int pcount)		loaddown(int weight)
