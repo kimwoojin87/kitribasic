@@ -1,0 +1,64 @@
+* package : windows의 folder와 비슷한 개념
+1. 비슷한 기능을 가진 class의 묶음
+2. class의 첫 줄에 package를 지정해야함.
+형식)
+package packagename;
+
+packagename : site의 주소를 거꾸로.특정이름;
+예) package com.kitri.member;
+package com.kitri.board;
+package com.kitri.product;
+
+package com.kitri.test;
+
+public class Car{}
+
+- com
+  - kitri
+    - test
+      - Car.class
+
+3. package로 지정된 클래스 사용.
+	import keyword 이용.
+	단, java.lang package는 import없이 사용가능.
+형식)
+패키지로 지정된 형식을 사용하게 될 경우에는 반드시 import를 사용해야한다.
+import packagename.ClassName;
+import packagename.*; *<--all class라는 의미.all package라는 의미가 아니다.
+
+예)
+(1)import com.kitri.test.Car;
+(2)import java.util.Calendar;
+(3)import java.util.Calendar.GregorianCalendar;
+(4)//import java.util.*; 하나의 패키지안에 여러가지 클래스를 쓰게 되었을떄
+ *을 쓰면 된다.
+(5)java.lang 이라는 패키지는 가장 기본적인 패키지라 자동으로 임포트가 된다.
+
+public class CarUser {
+	(1)Car car;
+	(4){(2)Calendar cal = new (3)GregorianCalendar();}
+	(5)String s;
+}
+
+
+jar파일은 커맨드환경에서 만들수도 있고
+이클립스에서 만들수도 있다.
+자바 클래스들을 압축할땐 jar이라는 확장자로 만들어진다.
+
+--외부에서 만든 jar파일을 사용하기 위해선..
+1.
+jre lib 폴더는 자동으로 인식한다.하지만 관리하기가 어렵기떄문에
+확장폴더인 ext에 jar파일을 넣으면 자동으로 인식시킬수있다.
+2.
+CLASSPATH 의 변수값으로 jar 파일이 있는 폴더를 지정해주면 된다.
+
+-- java 의 package
+java.lang : 가장 기본이 되는 문법 package
+java.awt : abstract window toolkit(window 창..)
+java.io : 입/출력
+java.util : utility
+java.net : network
+java.sql : JDBC(Java DataBase Connectivity)
+.
+.
+.
