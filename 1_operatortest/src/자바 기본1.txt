@@ -1,0 +1,150 @@
+*수업의 순서
+1. 변수 (variable) (자료형, date type)
+2. 연산자 (operator)
+3. 제어문(조건문[if,switch ~ case], 반복문[for, while, do ~ while])
+4. class (일반, 추상, 내부, interface), 상속
+	- field (속성)
+	- method (기능)
+5. package
+	- 사용자정의 package
+	- system package
+		- java.lang
+		- java.io
+		- java.net
+		- java.util
+		- java.awt
+		- java.sql
+		- ...기타등등...
+
+--------------------------------------------------------------------
+1. 변수 (Variable) : 하나의 값을 저장하는 공간.
+    1-1. 기본 Data Type
+
+	1-1-1. 선언
+	형식)
+           접근제어자,   자료형,    변수명;
+	   ex)
+	    private int age;
+	    default char gender;
+	    public String carName;
+	    private boolean flag;
+
+	1-1-2. 사용 (값저장, 값할당)
+	형식)
+	 변수명 = 값; 
+	ex)
+	 age = 25;
+	 gender = '남';
+	 carName = "쏘나타";
+	 flag = true;
+
+
+	 >>>>>>>>>>>>>>>>>1, 2를 동시에..
+	 형식)
+	 	접근제어자 자료형 변수명 = 값;
+	    예)
+	    private int age = 25;
+	    char gender = '여';
+	    public String carName = "쏘나타";
+	    boolean flag = true;
+
+
+
+
+    1-2. 참조형 (reference) Data Type
+
+
+
+
+
+* 접근제어자 (access modifier)
+  private				자신의 클래스 안에서만 사용가능.
+  dafault(생략시 기본)			private + 같은 package (윈도우로 치면 폴더) 안에서는 사용가능
+  protected				default + pacakage 가 달라도 두 클래스가 상속 관계일 경우 사용가능.
+  public				조건 제한 없이 사용가능.
+
+*자료형 (Data Type)
+  data type
+    - 기본형 DT			DT			size			etc
+    	- 논리형			boolean		1 byte		true, false
+	- 문자형			char		2 byte		'1'  , 'a' , ' 김 '       'abc' <--이건 문자열이라 할 수 없음
+	- 숫자형							특수문자 :  '\t' 탭 ,'\n' 줄바꿈 , ' \" ' , \"'('') , '\\'(=)'
+	      - 정수형		        byte		1 byte		
+	      				short		2 byte
+					int		4 byte          정수타입의 기본
+					long		8 byte
+
+	      - 실수형			float		4 byte
+	      				double		8 byte		실수타입의 기본
+
+
+    - 참조형 DT : Object, 배열( array )
+
+
+
+
+*명명규칙
+1. 영문, 숫자, 한글가능. 영문으로 시작.(숫자시작 X)
+2. 클래스는 대문자로, 메소드나 변수는 소문자로 시작. 합성어의 경우 단어의 첫글자를 대문자로. Camel case
+3. 변수 이름을 만들떄 의미를 부여하는 것이 좋다.
+4. 특수문자 사용할 수 없다. (단, _ $ 는 가능하나 $는 일반적으로 사용하지않음)
+5. 예약어 사용할 수 없다.
+
+
+*주석문.
+//  : 한 줄 주석
+/*
+
+
+*/ : 여러줄 주석
+
+/**
+*
+*
+*/: document 주석
+
+
+2. 연산자 (Operator)
+대입연산자가 가장 마지막이다.
+ 2-1 단항연산자
+  a. 1증가(감소) 연산자 : ++ , -- 
+     변수++  :  선실행 후증가
+     ++변수  :  선증가 후실행
+     예)
+     int x = 10;
+     System.out.printlm(x);                 10
+     System.out.printlm(x++);               10
+     System.out.printlm(--x);               10
+     System.out.printlm(x++);               10
+     System.out.printlm(++x);               12
+     System.out.printlm(x--);               12
+     System.out.printlm(--x);               10
+     System.out.printlm(x++);               10
+     System.out.printlm(x);                 11
+
+산술연산자 + - * / 5
+
+비교연산자와 논리연산자의 값은 true , false이다.
+ 2-2 이항연산자
+  a.산술연산자 + - * / %
+  b.비교연산자
+  c.논리연산자
+        &&(AND)      ||(OR)
+	&&  T  F     ||  T  F
+	T   T  F      T  T  T
+	F   F  F      F  T  F
+2-3 삼항연산자
+  a.조건 (conditions) ? 값1 : 값2;
+   조건 true	>>값1
+   	false	>>값2
+ 실행문이 들어 갈 수 있는게 아니고 값만 들어갈 수 있다.
+ 
+2-4 대입연산자 : =, +=, -=, *=, /=, %=
+
+
+test)
+int x =10;
+x의 값을 1증가시키는 방법?
+
+x += 1
+System.out.println(x)
